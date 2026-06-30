@@ -20,14 +20,13 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v6
         with:
-          go-version: "1.21"
+          go-version: "1.25"
           cache: true
 
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v9
         with:
-          version: v1.54
-          args: --timeout=5m
+          version: v2
 
   vulncheck:
     name: Security Scan
@@ -39,13 +38,13 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v6
         with:
-          go-version: "1.21"
+          go-version: "1.25"
           cache: true
 
       - name: Run govulncheck
         uses: golang/govulncheck-action@v1
         with:
-          go-version-input: "1.21"
+          go-version-input: "1.25"
 
   test:
     name: Test (Go ${{ matrix.go-version }})
@@ -54,7 +53,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go-version: ["1.21", "1.22", "1.23", "1.24", "1.25", "1.26"]
+        go-version: ["1.25", "1.26"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7

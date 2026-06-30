@@ -54,7 +54,7 @@ gcp-msk-iam-sasl-token-provider/
 
 ### Prerequisites
 
-- Go `1.21` or later.
+- Go `1.25` or later.
 
 ### Dependency Download and Clean
 

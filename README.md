@@ -9,7 +9,7 @@
 
 This package focuses on retrieving and querying the underlying Google Access Token, and formatting it into the standard JWT format required by GCP Managed Service for Apache Kafka. Designed to be lightweight and zero-dependency, it does not rely on any specific Kafka client libraries (e.g., Sarama), offering maximum generalizability.
 
-This package requires `Go 1.21` or later.
+This package requires `Go 1.25` or later.
 
 > [!NOTE]
 > **About GCP Authentication Mechanism**
